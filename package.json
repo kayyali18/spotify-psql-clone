@@ -30,7 +30,6 @@
     "@testing-library/react": "^14.0.0",
     "class-variance-authority": "^0.5.2",
     "clsx": "^1.2.1",
-    "daisyui": "^2.51.6",
     "encoding": "^0.1.13",
     "jest-environment-jsdom": "^29.5.0",
     "jotai": "^2.0.4",

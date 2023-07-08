@@ -1,9 +1,6 @@
 // import { cache, Suspense } from 'react';
-// import Login from '~/components/login';
-// import TimeCounter from '~/components/time-counter';
 
-import Footer from '~/components/footer';
-import Landing from '~/components/landing';
+import Logo from '~/components/logo';
 
 // Example Data Fetching in Next
 // const getCatFact = cache(async () => {
@@ -23,15 +20,17 @@ export async function generateStaticParams() {
 }
 
 const Home = async ({ params: { lang } }: any) => {
-  const { about, contact, coaches } = await import(
+  const { about, contact } = await import(
     `@/meta/translations/${lang}/nav.json`
   );
-  // const fact: any = await getCatFact();
 
   return (
     <div>
-      <Landing />
-      <Footer />
+      <h1 className="m-5 text-center">
+        Example Lang from Page.tsx <br />
+        Current Lanugage: {lang} - {about} {contact}
+      </h1>
+      <Logo />
     </div>
   );
 };

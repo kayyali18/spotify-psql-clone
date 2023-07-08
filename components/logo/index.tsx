@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import LogoPic from '~/public/img/logo/medhal-logo.png';
 
 function Logo() {
   return (
-    <div className="relative h-full w-full">
+    <div className="absolute h-full w-full">
       <Image
-        src={LogoPic}
+        src="https://images.unsplash.com/photo-1573082987491-217b12b67990"
         fill
-        sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-        alt="Medhal Logo"
+        objectFit="cover"
+        // sizes="(max-width: 768px) 100vw,
+        //       (max-width: 1200px) 50vw,
+        //       33vw"
+        alt="Logo"
       />
     </div>
   );

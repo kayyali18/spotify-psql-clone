@@ -1,19 +1,18 @@
 import PrimaryLayout from '@/layouts/primary/PrimaryLayout';
-import { arabic, grandstander } from '@/meta/fonts';
+import { arabic, arabicAlt, julius } from '@/meta/fonts';
 import { Metadata } from 'next';
 import 'server-only';
 import 'styles/globals.sass';
-import Navbar from '~/components/navbar/static';
 
 export const metadata: Metadata = {
-  applicationName: 'Medhal Members',
-  description: 'Medhal Members application and user management application',
-  title: 'Medhal Members',
+  applicationName: 'NextQRE',
+  description: 'NextQRE A Next.js Template that supports i18n',
+  title: 'NextQRE',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'React', 'JavaScript'],
   authors: [{ name: 'Ahmad K' }, { name: 'Omar Q' }],
   viewport: { width: 'device-width', initialScale: 1 },
-  icons: ['/favicon.svg'],
+  icons: ['/favicon.ico'],
   colorScheme: 'dark',
   creator: 'Qutuz Media',
   publisher: 'Qutuz Media',
@@ -32,11 +31,9 @@ export default async function RootLayout({
     <html
       lang={lang}
       dir={dir}
-      className={`${grandstander.variable} ${arabic.variable}`}
+      className={`${julius.variable} ${arabic.variable} ${arabicAlt.variable}`}
     >
-      <body className="flex font-grandstander">
-        {/* @ts-expect-error Server Component */}
-        <Navbar lang={lang} />
+      <body className="bg-stone-200 font-julius rtl:font-arabic-alt">
         <PrimaryLayout>{children}</PrimaryLayout>
       </body>
     </html>

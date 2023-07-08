@@ -17,18 +17,15 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        grandstander: [
-          'var(--font-grandstander)',
+        julius: ['var(--font-julius)'],
+        archivo: ['var(--font-archivo)'],
+        arabic: ['var(--font-arabic)', ...defaultTheme.fontFamily.sans],
+        'arabic-alt': [
+          'var(--font-arabic-alt)',
           ...defaultTheme.fontFamily.sans,
         ],
-        arabic: ['var(--font-arabic)', ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        medhal: {
-          light: '#07d5c0',
-          dark: '#00796c',
-        },
-      },
+      colors: {},
       // Animations
       keyframes: {
         animateunderline: {
@@ -48,7 +45,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('daisyui'),
     plugin(({ addUtilities, matchUtilities, theme }) => {
       /** https://github.com/tailwindlabs/tailwindcss/discussions/3378#discussioncomment-4177286 */
       // https://github.com/jamiebuilds/tailwindcss-animate
