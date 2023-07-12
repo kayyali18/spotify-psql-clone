@@ -5,9 +5,9 @@ import 'server-only';
 import 'styles/globals.sass';
 
 export const metadata: Metadata = {
-  applicationName: 'NextQRE',
+  applicationName: 'Sqotify',
   description: 'NextQRE A Next.js Template that supports i18n',
-  title: 'NextQRE',
+  title: 'Sqotify',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'React', 'JavaScript'],
   authors: [{ name: 'Ahmad K' }, { name: 'Omar Q' }],
