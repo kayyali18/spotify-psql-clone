@@ -1,9 +1,8 @@
-// import { cache, Suspense } from 'react';
-
-import Logo from '~/components/logo';
+import Header from '~/components/header';
+import Library from '~/components/library';
 
 // Example Data Fetching in Next
-// const getCatFact = cache(async () => {
+// const getCatFact = async () => {
 //   await fetch('https://hub.dummyapis.com/delay?seconds=5', {
 //     cache: 'no-cache',
 //   });
@@ -13,25 +12,30 @@ import Logo from '~/components/logo';
 //   });
 
 //   return fact.json();
-// });
+// };
 
-export async function generateStaticParams() {
-  return [{ lang: 'ar' }, { lang: 'en' }];
-}
+// export async function generateStaticParams() {
+//   return [{ lang: 'ar' }, { lang: 'en' }];
+// }
 
 const Home = async ({ params: { lang } }: any) => {
   const { about, contact } = await import(
     `@/meta/translations/${lang}/nav.json`
   );
 
+  // const facts = await getCatFact();
   return (
-    <div>
-      <h1 className="m-5 text-center">
-        Example Lang from Page.tsx <br />
-        Current Lanugage: {lang} - {about} {contact}
-      </h1>
-      <Logo />
-    </div>
+    <>
+      <header>
+        <h1 className="m-5 text-center">
+          Example Lang from Page.tsx <br />
+          Current Lanugage: {lang} - {about} {contact}
+        </h1>
+      </header>
+
+      <Header>Header</Header>
+      <Library />
+    </>
   );
 };
 

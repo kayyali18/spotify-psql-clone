@@ -39,7 +39,7 @@
     "react-dom": "^18.2.0",
     "server-only": "^0.0.1",
     "sharp": "^0.32.0",
-    "tailwind-merge": "^1.9.1"
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -67,6 +67,7 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2",
+    "react-icons": "^4.10.1",
     "sass": "^1.57.1",
     "storybook": "^7.0.0-beta.27",
     "supabase": "^1.34.5",

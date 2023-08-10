@@ -1,8 +1,10 @@
-import PrimaryLayout from '@/layouts/primary/PrimaryLayout';
-import { arabic, arabicAlt, julius } from '@/meta/fonts';
-import { Metadata } from 'next';
 import 'server-only';
 import 'styles/globals.sass';
+
+import { Metadata } from 'next';
+
+import SidebarLayout from '@/layouts/sidebar';
+import { arabic, arabicAlt, julius } from '@/meta/fonts';
 
 export const metadata: Metadata = {
   applicationName: 'Sqotify',
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
   publisher: 'Qutuz Media',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params: { lang },
 }: {
@@ -33,8 +35,8 @@ export default async function RootLayout({
       dir={dir}
       className={`${julius.variable} ${arabic.variable} ${arabicAlt.variable}`}
     >
-      <body className="bg-stone-200 font-julius rtl:font-arabic-alt">
-        <PrimaryLayout>{children}</PrimaryLayout>
+      <body className="bg-neutral-900 font-julius text-white rtl:font-arabic-alt">
+        <SidebarLayout>{children}</SidebarLayout>
       </body>
     </html>
   );
