@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function Logo() {
   return (
-    <div className="absolute h-full w-full">
+    <section className="relative h-full w-full">
       <Image
         src="https://images.unsplash.com/photo-1573082987491-217b12b67990"
         fill
@@ -12,7 +12,7 @@ function Logo() {
         //       33vw"
         alt="Logo"
       />
-    </div>
+    </section>
   );
 }
 
